@@ -12,6 +12,7 @@ Installation and Usage
 * the application's back-end base url is: `http://localhost:8080`
 
 Database:
+---------------------
 * Start a local MySQL server (for example with xampp)
 * Create a database named `skeleton`, username = root, no password
 * Make sure the MySQL is accessible through `127.0.0.1` or `localhost` (should be default behaviour)
