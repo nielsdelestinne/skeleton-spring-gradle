@@ -1,0 +1,9 @@
+rootProject.name = 'skeleton'
+
+include 'infrastructure'
+include 'interfaces'
+include 'application'
+include 'domain'
+include 'deploy'
+include 'ui'
+

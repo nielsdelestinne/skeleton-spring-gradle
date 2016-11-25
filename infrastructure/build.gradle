@@ -1,0 +1,21 @@
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web-services'
+    compile 'mysql:mysql-connector-java'
+}
+
+/**
+ * We generate a jar for the classes in our test-folder,
+ * so other projects can depend on these classes.
+ */
+task testJar(type: Jar) {
+    classifier 'test'
+    from sourceSets.test.output
+}
+
+configurations {
+    tests
+}
+
+artifacts {
+    tests testJar
+}

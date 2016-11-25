@@ -1,0 +1,7 @@
+dependencies {
+    compile project(":domain")
+    testCompile project(path: ':infrastructure', configuration: 'tests')
+    testCompile project(path: ':domain', configuration: 'tests')
+
+    compile 'org.springframework.boot:spring-boot-starter-web-services'
+}

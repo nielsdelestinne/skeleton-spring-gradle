@@ -1,0 +1,39 @@
+/**
+ * spring-boot plugin added so that the module can be
+ * executed and packaged as an executable jar.
+ */
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+apply plugin: 'spring-boot'
+apply plugin: 'war'
+
+def starterBaseName = 'starter-deploy'
+def starterVersion = '0.0.1-SNAPSHOT'
+
+// We generate a war instead of jar
+//jar {
+//    baseName = starterBaseName
+//    version = starterVersion
+//}
+
+war {
+    baseName = starterBaseName
+    version =  starterVersion
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    compile project(":infrastructure")
+    compile project(":interfaces")
+    compile project(":application")
+    compile project(":domain")
+    compile project(":ui")
+}

@@ -1,0 +1,11 @@
+dependencies {
+    compile project(':application')
+    testCompile project(path: ':infrastructure', configuration: 'tests')
+    testCompile project(path: ':domain', configuration: 'tests')
+
+    compile 'org.springframework.boot:spring-boot-starter-web-services'
+    compile ('com.jayway.restassured:rest-assured') {
+        exclude group: 'org.codehaus.groovy'
+    }
+    compile 'org.codehaus.groovy:groovy-all'
+}
