@@ -1,10 +1,1 @@
-plugins {
-    id "com.moowork.gulp" version "0.13"
-    id "com.moowork.node" version "0.13"
-}
 
-/**
- * We build the ui using GULP when running the Gradle build
- * by calling the custom defined gulp task 'build' (in gulpfile.js) before executing gradle 'build'
- */
-build.dependsOn gulp_build
